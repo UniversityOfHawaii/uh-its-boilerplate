@@ -1,5 +1,5 @@
-# uh-groupings-boilerplate
-Styling and layout for UH Groupings
+# uh-its-boilerplate
+Styling and layout for UH ITS Applications and Websites
 
 You can find color variables in variables.css
 This uses the var() Function. https://www.w3schools.com/css/css3_variables.asp

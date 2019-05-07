@@ -11,40 +11,46 @@
     <link rel="stylesheet" type="text/css" href="css/colors.css">
     <!-- load google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:400,700" rel="stylesheet">
+
+    <!-- load scripts: Bootstrap -->
     <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/back-to-top.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
-    <div class="container">
-        <a class="navbar-brand align-items-center" href="/all-components.html/">
-            <img class="img-fluid" src="images/nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="UH logo">
-            <span class="sr-only">University of Hawai‘i</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<header role="banner" id="top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+        <div class="container">
+            <a class="navbar-brand align-items-center" href="/all-components.html/">
+                <img class="img-fluid" src="images/nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="UH logo">
+                <span class="sr-only">University of Hawai‘i</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/uhgroupings/admin">Admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/uhgroupings/memberships">Memberships</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/uhgroupings/groupings">Groupings</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/uhgroupings/admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/uhgroupings/memberships">Memberships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/uhgroupings/groupings">Groupings</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 
-<div class="container">
+<div class="container" role="main">
     <h1 class="mt-5">Headers and Menus</h1>
     <nav class="navbar navbar-expand-lg navbar-light border-bottom border-top pt-2 pb-2">
         <div class="container">

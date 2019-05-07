@@ -455,3 +455,45 @@ footer ul.list-unstyled li a:active {
     color: #fff;
     transition: .4s;
 }
+
+/* back to top */
+.go-top {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: -40px;
+    right: 20px;
+    transition: all 1s ease;
+    text-decoration: none;
+    background: #e2e2e2;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    height: 32px;
+    padding-bottom: 3px;
+    width: 35px;
+    z-index: 90;
+}
+.go-top span {
+    align-self: center;
+    color: #444;
+    font-size: 16px;
+    line-height: .8;
+}
+.go-top.show {
+  bottom: 20px;
+  display: flex !important;
+}
+.go-top:hover,
+.go-top:focus,
+.go-top:active {
+  background: #907139;
+  border-color: transparent;
+  text-decoration: none;
+}
+.go-top:hover span,
+.go-top:focus span,
+.go-top:active span {
+  color: #fff;
+}
