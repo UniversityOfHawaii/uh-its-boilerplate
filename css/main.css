@@ -88,6 +88,64 @@ td.uh-pre {
     padding-bottom: 0;
 }
 
+.navbar-icons {
+    padding: 0;
+}
+
+.navbar-icons img {
+    padding: .4rem 0 .55rem;
+}
+
+.navbar-icons.navbar .navbar-nav .nav-item {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-icons.navbar .navbar-nav a.nav-link {
+    border-left: 1px solid var(--light-gray);
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-icons a.nav-link i {
+    color: var(--uh-system-50);
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+
+.navbar-icons.navbar a.nav-link:hover,
+.navbar-icons.navbar a.nav-link:focus,
+.navbar-icons.navbar a.nav-link:active {
+    background: var(--uh-system-12);
+    color: var(--uh-black);
+}
+
+.navbar-icons a.nav-link:hover i,
+.navbar-icons a.nav-link:focus i,
+.navbar-icons a.nav-link:active i {
+    color: inherit;
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767.4px) {
+    .navbar-icons.navbar .navbar-nav {
+        border-right: 1px solid var(--light-gray);
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .navbar-icons.navbar .navbar-nav .nav-item {
+        flex-basis: 50%;
+    }
+    .navbar-icons.navbar .navbar-nav a.nav-link {
+        border-top: 1px solid var(--light-gray);
+    }
+}
+
 .fixed-top .navbar-nav {
     /*padding: 2.5rem 0 0 0;
     font-size: .9375rem;*/
@@ -470,7 +528,7 @@ footer ul.list-unstyled li a:active {
     background: #e2e2e2;
     border: 3px solid #fff;
     border-radius: 50%;
-    height: 32px;
+    height: 35px;
     padding-bottom: 3px;
     width: 35px;
     z-index: 90;

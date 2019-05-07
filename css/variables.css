@@ -4,6 +4,19 @@
     --uh-dark-gray: #454545;
     --light-gray: #e7e7e7;
     --link-blue: #1678a4;
+    --uh-system: #b3995d;
+    --uh-system-shade: #a5875c;
+    --uh-system-50: #d6c9b6;
+    --uh-system-30: #e7ded3;
+    --uh-system-20: #efe9e2;
+    --uh-system-12: #f5f2ed;
+
+    --red: #9a3f58;
+    --red-shade: #9a3f58;
+    --green: #5f7b3f;
+    --green-shade: #4f6736;
+    --purple: #735e7c;
+    --purple-shade: #64496a;
 
     --seafoam: #e3f2ef;
     --deep-blue: #424895;
@@ -13,4 +26,14 @@
     --blue: #00a6b2;
     --light-teal: #52c4b5;
     --teal-tint: #c7e7e0;
+
+/*
+    --xs-max: 575.4px;
+    --sm-min: 576px;
+    --sm-max: 767.4px;
+    --md-min: 768px;
+    --md-max: 991.4px;
+    --lg-min: 992px;
+    --lg-max: 1199.4px;
+    --lx-min: 1200px; */
 }
