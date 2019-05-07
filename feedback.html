@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>UH Groupings Home</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <!-- load google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+    <div class="container">
+        <a class="navbar-brand align-items-center" href="home-administrator.html">
+            <img class="img-fluid" src="images/uh-groupings-logo.png" srcset="images/uh-groupings-logo.png 1x, images/uh-groupings-logo-2x.png 2x" alt="UH Groupings">
+            <span class="sr-only">UH Groupings</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="memberships.html"> Memberships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="groupings.html">Groupings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <form action="home-public.html" method="post"><input type="hidden" name="_csrf" value="0e4fe4e7-7b20-4e45-8366-84baeb50953c">
+                        <button class="btn btn-outline-secondary" type="submit">Logout (<span id="name">username</span>) <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--  Content container -->
+<div class="container">
+    <div class="row pt-5 pb-4">
+        <div class="col-lg-5 col-md-4 col-12">
+            <h1 class="text-center text-md-left">Feedback</h2>
+            <p class="lead text-center text-md-left">Helps us to understand where improvements are needed. Please let us know.</p>
+        </div>
+        <div class="col-lg-7 col-md-8 col-12">
+            <form>
+                <div class="form-group pb-3">
+                    <label for="feedback-type">Feedback Type <span class="required-asterisk">*</span></label>
+                    <select class="form-control" id="feedback-type">
+                      <option>General</option>
+                      <option>Problem</option>
+                      <option>Feature</option>
+                      <option>Question</option>
+                    </select>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="input-name">Your Name (Optional)</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="John Doe">
+                </div>
+                <div class="form-group pb-3">
+                    <label for="input-email">Email address <span class="required-asterisk">*</span></label>
+                    <input type="email" class="form-control" id="input-email" placeholder="email@hawaii.edu">
+                </div>
+                <div class="form-group pb-3">
+                    <label for="feedback-content">Your Feedback <span class="required-asterisk">*</span></label>
+                    <textarea class="form-control" id="feedback-content" rows="6"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- / Content container. -->
+
+<footer class="footer black-bg pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 text-center ">
+                <img class="img-fluid mb-4" src="images/uh-logo-system.png" srcset="images/uh-logo-system.png 1x, images/uh-logo-system-2x.png 2x"  alt="UH System logo">
+            </div>
+            <div class="col-md-8 col-sm-7">
+                <p>The University of Hawai&#699;i is an <a href="https://www.hawaii.edu/offices/eeo/policies/?policy=antidisc">equal opportunity/affirmative action institution</a>.</p>
+                <p>Use of this site implies consent with our <a href="https://www.hawaii.edu/policy/docs/temp/ep2.210.pdf" title="UH Usage Policy">Usage Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>UH Groupings Home</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <link rel="stylesheet" type="text/css" href="css/local.css">
+    <!-- load google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="scripts/lodash.min.js"></script>
+    <script type="text/javascript" src="scripts/ui-bootstrap-tpls.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+    <div class="container">
+        <a class="navbar-brand align-items-center" href="home-administrator.html">
+            <img class="img-fluid" src="images/uh-groupings-logo.png" srcset="images/uh-groupings-logo.png 1x, images/uh-groupings-logo-2x.png 2x" alt="UH Groupings">
+            <span class="sr-only">UH Groupings</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="memberships.html"> Memberships</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="groupings.html">Groupings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <form action="home-public.html" method="post"><input type="hidden" name="_csrf" value="0e4fe4e7-7b20-4e45-8366-84baeb50953c">
+                        <button class="btn btn-outline-secondary" type="submit">Logout (<span id="name">username</span>) <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--  Content container -->
+<div class="seafoam-bg pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 mb-3 mb-sm-0">
+                <div class="user-icon text-center rounded-circle bg-light p-3 mx-auto ml-md-0 mr-md-0">
+                    <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+                    <i class="user-role rounded-circle blue-bg text-light fa fa-key fa-sm p-2" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <h1 class="h3 text-center text-md-left">Welcome, username!</h1>
+                <p class="lead text-center text-md-left"><span class="name">Your Full Name</span>, <em class="role">Administrator</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mb-5 mb-md-0">
+            <div class="dashboard-item-icon text-primary mb-3">
+                <i class="fa fa-key fa-3x mr-4" aria-hidden="true"></i>
+                <span class="h1">11</span>
+            </div>
+            <div class="dashboard-item-content">
+                <h2 class="h4">Administration</h2>
+                <p>Manage the list of Administrators for this service. Search for and manage any grouping on behalf of the owner.</p>
+                <a class="btn dark-teal-bg" href="/uhgroupings/admin">Admin</a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5 mb-md-0">
+            <div class="dashboard-item-icon text-primary mb-3">
+                <i class="fa fa-wrench fa-3x mr-3" aria-hidden="true"></i>
+                <span class="h1">4</span>
+            </div>
+            <div class="dashboard-item-content">
+                <h2 class="h4">Groupings</h2>
+                <p>View and manage my memberships. Search for new groupings to join as a member.</p>
+                <a class="btn dark-teal-bg" href="/uhgroupings/memberships">Memberships</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dashboard-item-icon text-primary mb-3">
+                <i class="fa fa-id-card fa-3x mr-4" aria-hidden="true"></i>
+               <span class="h1">21</span>
+            </div>
+            <div class="dashboard-item-content">
+                <h2 class="h4">Members</h2>
+                <p>View and manage groupings I own. Manage members, configure grouping options and sync destinations.</p>
+                <a class="btn dark-teal-bg" href="/uhgroupings/groupings">Groupings</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="seafoam-bg pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 mb-3 mb-sm-0">
+                <div class="user-icon text-center rounded-circle bg-light p-3 mx-auto ml-md-0 mr-md-0">
+                    <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+                    <i class="user-role rounded-circle blue-bg text-light fa fa-wrench fa-sm p-2" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <h1 class="h3 text-center text-sm-left">Welcome, username!</h1>
+                <p class="lead text-center text-sm-left"><span class="name">Your Full Name</span>, <em class="role">Owner or Manager</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 mb-5 mb-md-0">
+            <div class="dashboard-item-icon text-primary mb-3">
+                <i class="fa fa-wrench fa-3x mr-4" aria-hidden="true"></i>
+               <span class="h1">21</span>
+            </div>
+            <div class="dashboard-item-content">
+                <h2 class="h4">Groupings</h2>
+                <p>View and manage groupings I own. Manage members, configure grouping options and sync destinations.</p>
+                <a class="btn dark-teal-bg" href="/uhgroupings/groupings">Groupings</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="dashboard-item-icon text-primary mb-3">
+                <i class="fa fa-id-card fa-3x mr-3" aria-hidden="true"></i>
+                <span class="h1">4</span>
+            </div>
+            <div class="dashboard-item-content">
+                <h2 class="h4">Memberships</h2>
+                <p>View and manage my memberships. Search for new groupings to join as a member.</p>
+                <a class="btn dark-teal-bg" href="/uhgroupings/memberships">Memberships</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="seafoam-bg pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 mb-3 mb-sm-0">
+                <div class="user-icon text-center rounded-circle bg-light p-3 mx-auto ml-md-0 mr-md-0">
+                    <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+                    <i class="user-role rounded-circle blue-bg text-light fa fa-id-card fa-sm p-2" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <h1 class="h3 text-center text-sm-left">Welcome, username!</h1>
+                <p class="lead text-center text-sm-left"><span class="name">Your Full Name</span>, <em class="role">Member</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 dashboard-item-icon text-primary mb-3">
+            <i class="fa fa-wrench fa-3x mr-3" aria-hidden="true"></i>
+            <span class="h1">4</span>
+        </div>
+        <div class="col-sm-8 col-md-5 dashboard-item-content">
+            <h2 class="h4">Memberships</h2>
+            <p>View and manage my memberships. Search for new groupings to join as a member.</p>
+            <a class="btn dark-teal-bg" href="/uhgroupings/memberships">Memberships</a>
+        </div>
+    </div>
+</div>
+<!-- / Content container. -->
+
+<footer class="footer black-bg pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 text-center ">
+                <img class="img-fluid mb-4" src="images/uh-logo-system.png" srcset="images/uh-logo-system.png 1x, images/uh-logo-system-2x.png 2x"  alt="UH System logo">
+            </div>
+            <div class="col-md-8 col-sm-7">
+                <p>The University of Hawai&#699;i is an <a href="https://www.hawaii.edu/offices/eeo/policies/?policy=antidisc">equal opportunity/affirmative action institution</a>.</p>
+                <p>Use of this site implies consent with our <a href="https://www.hawaii.edu/policy/docs/temp/ep2.210.pdf" title="UH Usage Policy">Usage Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body></html>
