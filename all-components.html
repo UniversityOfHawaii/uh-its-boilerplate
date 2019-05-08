@@ -82,7 +82,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light border-bottom border-top mt-3 pl-0 pr-0 pt-2 pb-2">
         <a class="navbar-brand align-items-center" href="/all-components.html/">
-            <img class="img-fluid" src="images/nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="UH logo">
+            <img class="img-fluid" src="images/uh-left-color.png" alt="UH logo">
             <span class="sr-only">University of Hawai‘i</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,19 +104,21 @@
                     <a class="nav-link" href="/uhgroupings/groupings">Groupings</a>
                 </li>
                 <li class="nav-item">
-                    <form action="/uhgroupings/logout" method="post"><input type="hidden" name="_csrf" value="0e4fe4e7-7b20-4e45-8366-84baeb50953c">
-                        <button class="btn btn-link bg-light navbar-logout" type="submit">Logout (<span id="name">macarino</span>) <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        </button>
-                    </form>
+                    <a class="btn btn-secondary login" href="/uhgroupings/login">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-top pt-2 pb-2 mt-3">
+    <nav class="navbar navbar-text navbar-expand-lg navbar-light border-bottom border-top pt-3 pb-3 mt-3">
         <a class="navbar-brand align-items-center" href="/uhgroupings/">
-            <img class="img-fluid" src="images/uh-groupings-logo.png" srcset="images/uh-groupings-logo.png 1x, images/uh-groupings-logo-2x.png 2x" alt="UH Groupings">
-            <span class="sr-only">UH Groupings</span>
+            <div class="image">
+                <img class="img-fluid" src="images/uh-seal.png" alt="UH seal">
+            </div>
+            <div class="site-titles">
+                <div class="uh-title">University of Hawai&#699;i<span class="registered">®</span></div>
+                <div class="site-title">UH Groupings</div>
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -125,7 +127,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/uhgroupings/info"><i class="fa fa-info-circle" aria-hidden="true"></i> Info</a>
+                    <a class="nav-link" href="/uhgroupings/info">Info</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn dark-teal-bg login" href="/uhgroupings/login">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
@@ -135,17 +137,40 @@
     </nav>
 </div>
 
-<!--  Content container -->
+<!-- login -->
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <div class="card p-5">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- banner -->
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-sm-7 d-inline-flex align-items-center">
             <div>
-                <h1 class="sr-only">UH Groupings</h1>
-                <img class="img-fluid align-self-center" src="images/uh-groupings-text.png" srcset="images/uh-groupings-text.png 1x, images/uh-groupings-text-2x.png 2x" alt="UH Groupings logotype">
+                <h1>Sitename or Tagline</h1>
                 <p class="lead">Manage your groupings in one place, use them in many.</p>
-                <form action="https://www.test.hawaii.edu/uhgroupings/logout" method="post"><input type="hidden" name="_csrf" value="0e4fe4e7-7b20-4e45-8366-84baeb50953c">
-                    <button class="btn btn-lg dark-teal-bg" type="submit">Logout</button>
-                </form>
+                <button class="btn btn-lg dark-teal-bg" type="submit">Learn More</button>
             </div>
         </div>
         <div class="col-sm-5 align-middle d-none d-sm-block">
@@ -191,6 +216,41 @@
     </div>
 </div>
 <!-- / Content container. -->
+
+<div class="container">
+    <div class="row pt-5 pb-4">
+        <div class="col-lg-5 col-md-4 col-12">
+            <h1 class="text-center text-md-left">Feedback</h2>
+            <p class="lead text-center text-md-left">Helps us to understand where improvements are needed. Please let us know.</p>
+        </div>
+        <div class="col-lg-7 col-md-8 col-12">
+            <form>
+                <div class="form-group pb-3">
+                    <label for="feedback-type">Feedback Type <span class="required-asterisk">*</span></label>
+                    <select class="form-control" id="feedback-type">
+                      <option>General</option>
+                      <option>Problem</option>
+                      <option>Feature</option>
+                      <option>Question</option>
+                    </select>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="input-name">Your Name (Optional)</label>
+                    <input type="text" class="form-control" id="input-name" placeholder="John Doe">
+                </div>
+                <div class="form-group pb-3">
+                    <label for="input-email">Email address <span class="required-asterisk">*</span></label>
+                    <input type="email" class="form-control" id="input-email" placeholder="email@hawaii.edu">
+                </div>
+                <div class="form-group pb-3">
+                    <label for="feedback-content">Your Feedback <span class="required-asterisk">*</span></label>
+                    <textarea class="form-control" id="feedback-content" rows="6"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!--  Content container -->
 <div class="seafoam-bg pt-5 mt-5">
@@ -399,7 +459,9 @@
     </div>
 </div>
 
-<h1>Footers</h1>
+<div class="container">
+    <h1>Footers</h1>
+</div>
 <div class="footer-options">
 
     <footer class="footer pt-5 pb-5 mb-2 black-bg" id="app-id">

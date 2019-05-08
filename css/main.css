@@ -186,6 +186,47 @@ td.uh-pre {
     color: rgba(0, 0, 0, .7);
 }
 
+.navbar-text {
+    display: flex;
+}
+
+.navbar-text .navbar-brand {
+    display: flex;
+}
+
+.navbar-text .navbar-brand .image {
+    flex-basis: 50px;
+    margin-right: 1rem;
+}
+
+.navbar-text .navbar-brand img {
+    height: auto;
+    width: 100%;
+}
+
+.site-titles {
+    flex: 1;
+    line-height: 1.3;
+}
+
+.uh-title {
+    font-size: .9rem;
+    position: relative;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.uh-title .registered {
+    color: var(--uh-black);
+    font-size: .6rem;
+    position: relative;
+    top: -4px;
+    right: 0;
+}
+
 .user-icon {
     height: 100px;
     position: relative;
