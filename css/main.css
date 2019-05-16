@@ -26,6 +26,12 @@ h4 {
     font-size: 1rem;
 }
 
+.geo-background {
+    background-image: url(../images/0-lines3.png);
+    background-position: top center;
+    background-repeat: repeat-x;
+}
+
 .loader {
     border: 16px solid white; /* Black */
     border-top: 16px solid black; /* Blue */
