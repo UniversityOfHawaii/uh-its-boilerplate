@@ -32,6 +32,14 @@ h4 {
     background-repeat: repeat-x;
 }
 
+pre {
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
 .loader {
     border: 16px solid white; /* Black */
     border-top: 16px solid black; /* Blue */
