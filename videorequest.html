@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.hawaii.edu/access/resources/webdev/ -->
+<html lang="en-US" class="fa-events-icons-ready">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Production Request Form | ITS, University of Hawai‘i    </title>
+    <link rel="stylesheet" type="text/css" media="all" href="./styles2/system2018.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="shortcut icon" href="./images2/uh-icon.png">
+</head>
+
+<body>
+    <header id="top">
+        <a href="#main_area" id="skip2main">Skip to Main Content</a>
+        <div id="header_mid">
+            <div class="container">
+                <a href="https://www.hawaii.edu/" title="University of Hawai‘i home">
+                    <img id="header_mid_logo" src="./images2/uh-nameplate.png" alt="University of Hawai‘i">
+                </a>
+            </div>
+        </div>
+        <div id="department_name">
+            <div class="container">
+                <div class="site-name-description">
+                    <h1 id="header_sitename">
+                        <a href="https://www.hawaii.edu/its/" rel="home">Information Technology Services</a>
+                    </h1>
+                </div>
+                <a href="https://www.hawaii.edu/its/" class="button">Return to ITS Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main_area" class="one-column">
+        <div id="main_content">
+            <div id="container">
+                <div id="content">
+                    <h1 class="entry-title">Video Production Request</h1>
+
+                    <FORM method=POST action="thankyou.php">
+
+                    <p>Please complete this form to request our video production services. Requests should be submitted no later than 2 - 3 weeks prior to the production date. By completing this form, the requestor agrees to the copyright rules applicable to the production. If you experience any difficulty with the application form, please contact us.</p>
+
+                    <p><label for="contactname">Contact Name:</label>
+                    <input type="text" name="contactname" id="contactname" size="30" class="yellow-bg" />
+                    </p>
+                    <p><label for="company">Department/Organization:</label>
+                      <input type="text" name="company" id="company" size="30" /></p>
+                    <p><label for="phone">Phone number:</label>
+                      <input type="text" name="phone" id="phone" size="16" class="yellow-bg" />
+                      </p>
+                    <p><label for="email"> E-mail: </label>
+                      <input type="text" name="email" id="email" size="30" class="yellow-bg" /></p>
+                    <p><label for="address">Mailing Address:</label>
+                    <textarea name="address" id="address" rows="4" cols="27" wrap="virtual"></textarea></p>
+                    <p><label for="billinginfo">Billing Contact Information</label>
+                    <textarea name="billinginfo" id="billinginfo" rows="4" cols="27" wrap="virtual"></textarea></p>
+                    <h2>Production Information</h2>
+                    <p><label for="productiondate">Requested Production Date:</label>
+                      <input type="text" name="productiondate" id="productiondate" size="20" /></p>
+                      <p><label for="productiontitle">Production Title (if known):</label>
+                      <input type="text" name="productiontitle" id="productiontitle" size="20" /></p>
+                    <p><label for="location">Production Location:</label>
+                      <input type="text" name="location" id="location" size="20" /></p>
+                    <p><label for="starttime">Event Time (if live event):
+                      </label>
+                      <input type="text" name="starttime" id="starttime" size="20" />
+                    </p>
+                    <p><label for="purpose">Purpose of Video: What do you want the video to achieve?</label>
+                    <input type="text" name="purpose" id="purpose" size="40" /></p>
+                    <p><label for="audience">Target Audience:</label>
+                      <input type="text" name="audience" id="audience" size="20" /></p>
+                    <p><label for="distribution">Where will the program be seen? (Broadcast Television, DVD, Web, etc):</label>
+                    <input type="text" name="distribution" id="distribution" size="20" /></p>
+                    <p><label for="moredetails">More Details/Project Description</label>
+                    <textarea name="moredetails" id="moredetails" rows="4" cols="27" wrap="virtual"></textarea></p>
+                    <p><label for="budget">Budget Allocated (if known): $</label>
+                    <input type="text" name="budget" id="budget" size="12" /></p>
+
+                      <h2>Production Elements</h2>
+                      <p>Please check any/all elements you would like to include in your program.</p>
+                        <blockquote>*By including any of these elements, you are agreeing to obtain any necessary copyright clearance and Academic Technologies is not held accountable for infringement of the rules and regulations held to the University system.</blockquote>
+
+                        <p>
+                            <label for="Graphics">
+                            <input name="Graphics" type="checkbox" id="graphics" value="Graphics" />
+                            Graphics (Scanned Images, Slides, Power Point Presentation)</label>
+                        </p>
+                        <p>
+                            <label for="Audio">
+                            <input name="Audio" type="checkbox" id="Audio" value="Music/Audio file" />
+                            Music/Audio file </label>
+                        </p>
+                        <p>
+                            <label for="VideoFilm">
+                            <input name="VideoFilm" type="checkbox" id="VideoFilm" value="Video/Film" />
+                            Video/Film  (Movie clips, etc.)</label>
+                        </p>
+                        <h3>Logistics &amp; Equipment Requirements</h3>
+                        <p>Please check any/all equipment requirements for your production.</p>
+                        <p>
+                            <label for="CameraCount">Number of Cameras needed.
+                                <select name="CameraCount" id="CameraCount">
+                                  <option selected="selected">1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>Not Sure</option>
+                                </select>
+                            </label>
+                        </p>
+
+                        <blockquote>*Select &quot;Not Sure&quot; if you are unsure of your production requirements. We can suggest the appropriate amount needed based on the information provided by this request.</blockquote>
+
+                        <p>
+                            <label for="Postproduction">
+                                <input name="edit" type="checkbox" id="Postproduction" value="Post-Production/Editing Work" />
+                                Post-Production/Editing Work
+                            </label>
+                        </p>
+                        <p>
+                            <label for="Teleprompter">
+                                <input name="Teleprompter" type="checkbox" id="Teleprompter" value="Teleprompter" />
+                                Teleprompter
+                          </label>
+                        </p>
+                        <p>
+                            <label for="audsupport">
+                                <!--<input name="AudioSupport" type="checkbox" id="AudioSupport" value="Audio Support" />-->
+                                Audio Support
+                                (ex: CD audio playback during an event dinner, etc.):
+                            </label>
+
+                            <textarea name="audsupport" id="audsupport" rows="4" cols="27" wrap="virtual"></textarea>
+                        </p>
+                        <p>
+                            <label for="ProgramLength">Total Program Length</label>
+                            <input type="text" name="ProgramLength" id="ProgramLength" />
+                        </p>
+                        <p>
+                            <label for="ProjectDue">Project Due Date</label>
+                            <input type="text" name="ProjectDue" id="ProjectDue" />
+                        </p>
+                        <pre>
+                            <input type="submit" name=" Submit " value=" Send " />
+                            <input type="reset" value=" Reset " />
+                        </pre>
+
+    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer_btm">
+            <div id="footer_btm_content">
+
+                <div class="uh_col c1_4">
+                    <img src="./images2/uh-footer-logo.png" alt="uh system logo"><br>2444 Dole Street<br>Honolulu, HI 96822
+                </div>
+                <div class="uh_col c2_4">
+                    An <a href="https://www.hawaii.edu/offices/eeo/policies/">equal opportunity/affirmative action institution</a><br>
+                    Use of this site implies consent with our <a href="https://www.hawaii.edu/infotech/policies/itpolicy.html">Usage Policy</a><br>
+                    © 2018 <a href="https://www.hawaii.edu/">University of Hawaiʻi</a>
+                </div>
+                <div class="uh_col c3_4">
+                    <ul>
+                    <li><a href="https://www.hawaii.edu/calendar/">Calendar</a></li>
+                    <li><a href="https://www.hawaii.edu/directory/">Directory</a></li>
+                    <li><a href="https://www.hawaii.edu/emergency/">Emergency Information</a></li>
+                    <li><a href="https://myuh.hawaii.edu/">MyUH</a></li>
+                    <li><a href="http://workatuh.hawaii.edu/">Work at UH</a></li>
+                    </ul>
+                </div>
+                <div class="uh_col c4_4">
+
+                <p><a href="https://www.hawaii.edu/contact/">Contact UH</a><br>
+                If required, information contained on this website can be made available in an alternative format upon request.</p>
+                <p><a href="https://get.adobe.com/reader/">Get Adobe Acrobat Reader</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body></html>
