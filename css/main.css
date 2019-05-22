@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: 'Open Sans', 'Helvetica', Arial, sans-serif;
-    padding-top: 3.5rem; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*padding-top: 3.5rem; Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     /*padding-bottom: 3.125rem;*/
     background-color: white;
 }
@@ -609,4 +609,38 @@ footer ul.list-unstyled li a:active {
 .go-top:focus span,
 .go-top:active span {
   color: #fff;
+}
+
+.lead {
+    font-weight: 500;
+}
+
+header.plain #header_top #header_mid_logo {
+  max-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.mfa-error #content .page .featured-image img {
+  margin: 0 auto;
+  max-width: 120px;
+  height: auto;
+}
+@media only screen and (min-width: 720px) {
+  .mfa-error #content .page .featured-image img {
+    max-width: 220px;
+  }
+  .mfa-error #content .entry-content p {
+    padding-right: 2em;
+  }
+}
+
+.mfa-error small {
+  display: block;
+}
+
+.mfa-error small a:hover,
+.mfa-error small a:focus,
+.mfa-error small a:active {
+  cursor: help;
 }
