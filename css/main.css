@@ -623,13 +623,9 @@ header.plain #header_top #header_mid_logo {
 
 .mfa-error #content .page .featured-image img {
   margin: 0 auto;
-  max-width: 120px;
   height: auto;
 }
 @media only screen and (min-width: 720px) {
-  .mfa-error #content .page .featured-image img {
-    max-width: 220px;
-  }
   .mfa-error #content .entry-content p {
     padding-right: 2em;
   }
@@ -643,4 +639,11 @@ header.plain #header_top #header_mid_logo {
 .mfa-error small a:focus,
 .mfa-error small a:active {
   cursor: help;
+}
+
+@media only screen and (max-width: 767px) {
+    .border-md-0 {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
 }

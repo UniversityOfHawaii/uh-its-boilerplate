@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <title>ECM: Forms for OnBase Configuration</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/added-styles.css">
-    <link rel="icon" href="favicon.ico">
+    <title>Forms for OnBase Configuration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+    <!-- load font awesome 5 free -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- load bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- load google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <!-- load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- load back to top script -->
+    <script type="text/javascript" src="scripts/back-to-top.js"></script>
+    <!-- load bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <link rel="shortcut icon" href="images/uh-icon.png">
   </head>
   <body>
-    <section class="container pt-5">
+    <section class="container">
       <div class="row">
         <div class="col-md-6">
           <img class="mt-5 mb-5" src="images/uh-nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="university of hawaii logo">
@@ -43,16 +52,16 @@
             <p class="mb-5 text-md-center"></p>
             <div class="row">
               <div class="col-md-4 mb-4">
-                  <div class="card p-4 h-100">
-                      <img class="mb-3 img-fluid" src="images/1-form.png" height="120" alt="form with checkbox and input fields"><h3 class="h5 mb-2">Public Form Name</h3><small></small>
+                  <div class="p-4 h-100">
+                      <img class="mb-3" src="images/1-form.png" alt="form with checkbox and input fields"><h3 class="h5 mb-2">Public Form Name</h3><small></small>
                       <p class="text-muted">Form name referenced by department website.</p>
                       <label class="sr-only" for="input-form-name">Form Name</label>
                       <input class="form-control mb-3" id="input-form-name" type="textbox" placeholder="Form Name [e.g. Request for Written Verification...]">
                   </div>
               </div>
-              <div class="col-md-4 mb-4">
-                  <div class="card p-4 h-100">
-                      <img class="mb-3 img-fluid" src="images/2-security.png" height="120" alt="security badge with a lock"><h3 class="h5 mb-2">Security</h3><small></small><label class="form-check-label" for="input-AllGroups"><input class="form-check-input mb-3" id="input-AllGroups" type="checkbox" value="ALL" />All UH Affiliated Groups</label>
+              <div class="col-md-4 mb-4 border-left border-right border-secondary border-md-0">
+                  <div class="p-4 h-100">
+                      <img class="mb-3" src="images/2-security.png" alt="security badge with a lock"><h3 class="h5 mb-2">Security</h3><small></small><label class="form-check-label" for="input-AllGroups"><input class="form-check-input mb-3" id="input-AllGroups" type="checkbox" value="ALL" />All UH Affiliated Groups</label>
                       <p class="my-4 text-muted">OR</p>
                       <p class="mb-4 text-muted">UH Grouping assigned to this Unity Form.</p>
                       <label class="sr-only" for="input-grouping">UH Grouping Path</label>
@@ -60,8 +69,8 @@
                   </div>
               </div>
               <div class="col-md-4 mb-4">
-                  <div class="card p-4 h-100">
-                      <img class="mb-3 img-fluid" src="images/3-shared-form-url.png" height="120" alt="browser icon with url in field"><h3 class="h5 mb-2">Shared Form URL</h3><small></small>
+                  <div class="p-4 h-100">
+                      <img class="mb-3" src="images/3-shared-form-url.png" alt="browser icon with url in field"><h3 class="h5 mb-2">Shared Form URL</h3><small></small>
                       <p class="text-muted">URL generated by OnBase system to identify Unity Form and integration.</p>
                       <label class="sr-only" for="input-shared-url">Shared Form URL</label>
                       <input class="form-control mb-3" id="input-shared-url" type="textbox" placeholder="Shared Form URL [e.g. https://...]">
