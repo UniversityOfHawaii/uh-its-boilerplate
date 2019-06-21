@@ -1,3 +1,6 @@
+@import "variables.css";
+@import "bootstrap-overrides.css";
+
 html {
     position: relative;
     min-height: 100%;
@@ -26,8 +29,18 @@ h4 {
     font-size: 1rem;
 }
 
+.uh-nameplate img {
+    width: 340px;
+}
+
+@media screen and (max-width: 767.4px) {
+    .uh-nameplate {
+        max-width: 100%;
+    }
+}
+
 .geo-background {
-    background-image: url(../images/0-lines3.png);
+    background-image: url(../images/weave.png);
     background-position: top center;
     background-repeat: repeat-x;
 }
@@ -646,4 +659,11 @@ header.plain #header_top #header_mid_logo {
         border-left: 0 !important;
         border-right: 0 !important;
     }
+}
+
+.template-note {
+    background: var(--blue-shade);
+    color: var(--white);
+    font-size: .8rem;
+    padding: 1rem 0;
 }
