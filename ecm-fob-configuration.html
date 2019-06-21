@@ -22,23 +22,34 @@
     <link rel="shortcut icon" href="images/uh-icon.png">
   </head>
   <body>
-    <section class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img class="mt-5 mb-5" src="images/uh-nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="university of hawaii logo">
-          <h1 class="h3 mt-2">Form Configuration</h1>
-          <p class="mb-5">
-          Select the form to configure.  Use the "Document Type Group" to filter the form list.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="card p-5 mt-5">
-            <form>
-              <label for="selectdoctype" class="font-weight-bold">Select Document Type Group</label>
-              <select id="selectdoctype" class="form-control mb-3"><option disabled selected>Select</option><option>Document Type Group 1</option><option>Document Type Group 2</option><option>Document Type Group 3</option></select>
-              <label for="selectform" class="mt-3 font-weight-bold">Select Unity Form</label>
-              <select id="selectform" class="form-control mb-3"><option disabled selected>Select</option><option>Form 1</option><option>Form 2</option><option>Form 3</option></select>
-              <button class="btn btn-primary btn-block" type="submit">Select</button>
-            </form>
+    <header class="plain pt-3 mb-3">
+      <a href="https://www.hawaii.edu/its/uhlogin/mfa-required/#main_content" id="skip2main" class="sr-only">Skip to Main Content</a>
+      <div class="container">
+        <a href="https://hawaii.edu/" title="UH System website home">
+          <img class="mt-1" src="images/uh-nameplate.png" srcset="images/uh-nameplate.png 1x, images/uh-nameplate.png 2x" alt="university of hawaii logo">
+        </a>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-center">
+            <div>
+              <h1 class="h3 mt-2">Form Configuration</h1>
+              <p class="lead mb-5">
+              Select the form to configure.  Use the "Document Type Group" to filter the form list.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-5">
+              <form>
+                <label for="selectdoctype" class="font-weight-bold">Select Document Type Group</label>
+                <select id="selectdoctype" class="form-control mb-3"><option disabled selected>Select</option><option>Document Type Group 1</option><option>Document Type Group 2</option><option>Document Type Group 3</option></select>
+                <label for="selectform" class="mt-3 font-weight-bold">Select Unity Form</label>
+                <select id="selectform" class="form-control mb-3"><option disabled selected>Select</option><option>Form 1</option><option>Form 2</option><option>Form 3</option></select>
+                <button class="btn btn-primary btn-block" type="submit">Select</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -49,42 +60,38 @@
         <p class="mb-5 text-md-center">
           Forms exposed to UH affiliated groups outside of OnBase require the configuration of 3 key components:</p>
         <form>
-            <p class="mb-5 text-md-center"></p>
-            <div class="row">
-              <div class="col-md-4 mb-4">
-                  <div class="p-4 h-100">
-                      <img class="mb-3" src="images/1-form.png" alt="form with checkbox and input fields"><h3 class="h5 mb-2">Public Form Name</h3><small></small>
-                      <p>Form name referenced by department website.</p>
-                      <label class="sr-only" for="input-form-name">Form Name</label>
-                      <input class="form-control mb-3" id="input-form-name" type="textbox" placeholder="Form Name [e.g. Request for Written Verification...]">
-                  </div>
-              </div>
-              <div class="col-md-4 mb-4 border-left border-right border-light border-md-0">
-                  <div class="p-4 h-100">
-                      <img class="mb-3" src="images/2-security.png" alt="security badge with a lock"><h3 class="h5 mb-2">Security</h3><small></small><label class="form-check-label" for="input-AllGroups"><input class="form-check-input mb-3" id="input-AllGroups" type="checkbox" value="ALL" />All UH Affiliated Groups</label>
-                      <p class="my-4">OR</p>
-                      <p class="mb-4">UH Grouping assigned to this Unity Form.</p>
-                      <label class="sr-only" for="input-grouping">UH Grouping Path</label>
-                      <input class="form-control mb-3" id="input-grouping" type="textbox" placeholder="UH Grouping Path [e.g. hawaii.edu:store:...]">
-                  </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                  <div class="p-4 h-100">
-                      <img class="mb-3" src="images/3-shared-form-url.png" alt="browser icon with url in field"><h3 class="h5 mb-2">Shared Form URL</h3><small></small>
-                      <p>URL generated by OnBase system to identify Unity Form and integration.</p>
-                      <label class="sr-only" for="input-shared-url">Shared Form URL</label>
-                      <input class="form-control mb-3" id="input-shared-url" type="textbox" placeholder="Shared Form URL [e.g. https://...]">
-                  </div>
+          <p class="mb-5 text-md-center"></p>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="p-4 h-100">
+                <img class="mb-3" src="images/1-form.png" alt="form with checkbox and input fields"><h3 class="h5 mb-2">Public Form Name</h3><small></small>
+                <p>Form name referenced by department website.</p>
+                <label class="sr-only" for="input-form-name">Form Name</label>
+                <input class="form-control mb-3" id="input-form-name" type="textbox" placeholder="Form Name [e.g. Request for Written Verification...]">
               </div>
             </div>
-              <button class="btn btn-primary pl-5 pr-5" type="submit">Save</button>
+            <div class="col-md-4 mb-4 border-left border-right border-light border-md-0">
+              <div class="p-4 h-100">
+                <img class="mb-3" src="images/2-security.png" alt="security badge with a lock"><h3 class="h5 mb-2">Security</h3><small></small><label class="form-check-label" for="input-AllGroups"><input class="form-check-input mb-3" id="input-AllGroups" type="checkbox" value="ALL" />All UH Affiliated Groups</label>
+                <p class="my-4">OR</p>
+                <p class="mb-4">UH Grouping assigned to this Unity Form.</p>
+                <label class="sr-only" for="input-grouping">UH Grouping Path</label>
+                <input class="form-control mb-3" id="input-grouping" type="textbox" placeholder="UH Grouping Path [e.g. hawaii.edu:store:...]">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="p-4 h-100">
+                <img class="mb-3" src="images/3-shared-form-url.png" alt="browser icon with url in field"><h3 class="h5 mb-2">Shared Form URL</h3><small></small>
+                <p>URL generated by OnBase system to identify Unity Form and integration.</p>
+                <label class="sr-only" for="input-shared-url">Shared Form URL</label>
+                <input class="form-control mb-3" id="input-shared-url" type="textbox" placeholder="Shared Form URL [e.g. https://...]">
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary pl-5 pr-5" type="submit">Save</button>
         </form>
       </div>
     </section>
-
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
   </body>
 </html>
 
