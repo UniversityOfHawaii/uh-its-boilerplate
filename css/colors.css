@@ -1,11 +1,4 @@
 @import "variables.css";
-h1 {
-    color: #BD9319;
-}
-
-h2, h3, h4, h5, h6 {
-    color: #9B7506;
-}
 
 /* COLOR PALETTE */
 /* colors as background */
@@ -104,6 +97,7 @@ h5,
 .h5,
 h6,
 .h6 {
+    color: var(--uh-darker-gray);
     font-weight: 700;
 }
 
@@ -193,26 +187,14 @@ body h1 {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.uh-branding-one {
-    color: #777;
-}
 
 .btn-link {
     color: var(--deep-blue);
 }
 
-.uh-branding-two {
-    color: #777;
-}
-
 .dropshadow {
     text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
 }
-
-.fa.fa-trash-o {
-    color: #d21515;
-}
-
 .page-item.active > .page-link {
     /*background-color:*/
     /*border-color:*/
@@ -258,12 +240,7 @@ body h1 {
 }
 
 .btn-default {
-    background: #6fa9be;
-}
-
-.btn-default {
-    background: #6fa9be;
-    border-color: #5a9cb4;
+    background: var(uh-system-shade);
     color: white;
 }
 
@@ -271,10 +248,6 @@ body h1 {
 .btn:focus #name,
 .btn:active #name {
     color: #e3f2ef;
-}
-
-h1, h2, .text-left, span {
-    color: #1c6070;
 }
 
 .btn-light:hover {
@@ -287,14 +260,6 @@ h1, h2, .text-left, span {
     background: white;
 }
 
-.table {
-    background: white;
-}
-
-h3 {
-    color: #1c6070;
-}
-
 .loading-text{
     margin-left: 4.357em;
     color: #296191;
@@ -304,4 +269,8 @@ h3 {
 .done-text{
     color: #296191;
     text-align: right;
+}
+
+.border-light {
+    border-color: var(--light) !important;
 }

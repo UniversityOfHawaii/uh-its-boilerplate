@@ -4,7 +4,6 @@
     --uh-dark-gray: #454545;
     --uh-gray: #676767;
     --light-gray: #e7e7e7;
-/*  --link-blue: #1678a4; */
     --uh-system: #b3995d;
     --uh-system-shade: #a5875c;
     --uh-system-50: #d6c9b6;
@@ -14,6 +13,7 @@
 
     --primary: #007d95;
     --secondary: #676767;
+    --light: #ccc;
     --success: #5f7b3f;
     --info: #007d95;
     --warning: #ffd969;
