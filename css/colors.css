@@ -92,22 +92,24 @@ h2, h3, h4, h5, h6 {
 }
 
 /* bootstrap overrides */
-.text-primary {
-    color: var(--dark-teal) !important;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 700;
 }
 
-.text-muted {
-    color: var(--teal) !important;
-}
-
-.text-info {
-    color: var(--blue) !important;
-}
-
-.btn.btn-primary,
-.btn.btn-lg {
-    background: var(--dark-teal);
-    border-color: transparent;
+.btn-primary {
+    background: var(--blue);
+    border: 0;
 }
 
 .btn.btn-primary:hover,
@@ -116,20 +118,20 @@ h2, h3, h4, h5, h6 {
 .btn.btn-lg:hover,
 .btn.btn-lg:focus,
 .btn.btn-lg:active {
-    background: var(--teal);
+    background: var(--blue-shade);
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus,
 .btn-outline-secondary:active {
-    background-color: var(--green-blue);
-    border-color: var(--green-blue);
+    /*background-color: var(--green-blue);
+    border-color: var(--green-blue);*/
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background: white;
-    color: var(--dark-teal);
+    /*background: white;
+    color: var(--dark-teal);*/
 }
 
 .nav-pills .nav-link.active {
@@ -289,7 +291,7 @@ h1, h2, .text-left, span {
     background: white;
 }
 
-h3{
+h3 {
     color: #1c6070;
 }
 

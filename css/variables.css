@@ -2,8 +2,9 @@
     --uh-black: #222;
     --uh-darker-gray: #2d2d2d;
     --uh-dark-gray: #454545;
+    --uh-gray: #676767;
     --light-gray: #e7e7e7;
-    --link-blue: #1678a4;
+/*  --link-blue: #1678a4; */
     --uh-system: #b3995d;
     --uh-system-shade: #a5875c;
     --uh-system-50: #d6c9b6;
@@ -11,21 +12,28 @@
     --uh-system-20: #efe9e2;
     --uh-system-12: #f5f2ed;
 
+    --primary: #007d95;
+    --secondary: #676767;
+    --success: #5f7b3f;
+    --info: #007d95;
+    --warning: #ffd969;
+    --danger: #9a3f58;
+
     --red: #9a3f58;
     --red-shade: #9a3f58;
     --green: #5f7b3f;
     --green-shade: #4f6736;
     --purple: #735e7c;
     --purple-shade: #64496a;
+    --blue: #007d95;
+    --blue-shade: #00677b;
+    --teal: #118080;
+    --teal-shade: #0f7374;
 
-    --seafoam: #e3f2ef;
-    --deep-blue: #424895;
-    --green-blue: #004e59;
-    --dark-teal: #004252;
-    --teal: #0d7078;
-    --blue: #00a6b2;
-    --light-teal: #52c4b5;
-    --teal-tint: #c7e7e0;
+    --link-blue: #00748a;
+    --orange: #ff7962;
+    --orange-shade: #ea5a4f;
+    --yellow: #ffd969;
 
 /*
     --xs-max: 575.4px;
