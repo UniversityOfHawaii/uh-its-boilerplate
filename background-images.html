@@ -18,55 +18,65 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- load stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/colors.css">
     <link rel="shortcut icon" href="./images/logos/uh-icon.png">
   </head>
 
-  <body class="geo-background">
+  <body>
     <header role="banner" id="top">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
-        <div class="container">
-          <a class="navbar-brand align-items-center" href="/all-components.html/">
-            <img class="img-fluid" src="./images/logos/nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
-            <span class="sr-only">University of Hawai‘i</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/uhgroupings/admin">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/uhgroupings/memberships">Memberships</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/uhgroupings/groupings">Groupings</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+        <a class="navbar-brand align-items-center" href="index.html">
+          <img class="img-fluid" src="./images/logos/uh-nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
+          <span class="sr-only">University of Hawai‘i</span>
+        </a>
       </nav>
-     </header>
+    </header>
 
     <main>
       <div class="container" id="content" role="main">
         <h1 class="pt-4">Background Images</h1>
-        <p class="lead">Unity form redirect service is currently unavailable due to an unhandled error/exception.</p>
-        <p class="lead">Please check the ITS Alerts page to track the outage status or report this issue to the ITS Help Desk.</p>
-        <ul class="mb-5">
-          <li><a href="https://www.hawaii.edu/its/alerts/">ITS System Alerts</a></li>
-          <li><a href="https://www.hawaii.edu/its/ecm/">ECM Support</a></li>
-        </ul>
+        <p class="lead">Here are example background images, designed for a white background.</p>
         <div class="row">
           <div class="col-md-6">
           </div>
           <div class="featured-image col-md-6 text-center">
           </div>
         </div>
+
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card bg-white">
+              <img class="img-fluid card-img-top" src="./images/backgrounds/weave.png" alt="weave background image">
+              <div class="card-body">
+                <div class="card-title"><code>weave.png</code></div>
+                <a class="bg-white" href="./images/backgrounds/weave.png">Download</a> | <a class="bg-white" href="#weave-bg">View Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card bg-white">
+              <img class="img-fluid card-img-top" src="./images/backgrounds/triangle.png" alt="triangle background image">
+              <div class="card-body">
+                <div class="card-title"><code>triangle.png</code></div>
+                <a class="bg-white" href="./images/backgrounds/triangle.png">Download</a> | <a class="bg-white" href="#triangle-bg">View Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <section id="weave-bg" class="geo-background min-height-500 border-top mt-5 pb-5 pt-5">
+        <div class="container">
+          <p class="lead">This is an example bg image</p>
+          <code>weave.png</code>
+        </div>
+      </section>
+      <section id="triangle-bg" class="triangle-background min-height-500 border-top mt-5 pb-5 pt-5">
+        <div class="container">
+          <p class="lead">This is an example bg image</p>
+          <code>triangle.png</code>
+        </div>
+      </section>
     </main>
 
   </body>

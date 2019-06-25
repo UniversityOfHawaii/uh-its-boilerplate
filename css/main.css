@@ -40,9 +40,16 @@ h4 {
 }
 
 .geo-background {
-    background-image: url(../images/weave.png);
+    background-image: url(../images/backgrounds/weave.png);
     background-position: top center;
     background-repeat: repeat-x;
+}
+
+.triangle-background {
+    background-image: url(../images/backgrounds/triangle.png);
+    background-position: top center;
+    background-repeat: repeat-x;
+    background-size: 700px;
 }
 
 pre {
@@ -666,4 +673,8 @@ header.plain #header_top #header_mid_logo {
     color: var(--white);
     font-size: .8rem;
     padding: 1rem 0;
+}
+
+.min-height-500 {
+    min-height: 500px;
 }

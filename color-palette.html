@@ -23,29 +23,223 @@
   </head>
 
   <body>
-    <header class="plain pt-3 mb-3">
-      <a href="https://www.hawaii.edu/its/uhlogin/mfa-required/#main_content" id="skip2main" class="sr-only">Skip to Main Content</a>
-      <div class="container">
-        <a href="https://hawaii.edu/" title="UH System website home">
-          <img class="img-fluid" src="./images/logos/nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
+    <header role="banner" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+        <a class="navbar-brand align-items-center" href="index.html">
+          <img class="img-fluid" src="./images/logos/uh-nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
+          <span class="sr-only">University of Hawai‘i</span>
         </a>
-      </div>
+      </nav>
     </header>
 
     <main>
       <div class="container" id="content" role="main">
         <h1 class="pt-4">Color Palette</h1>
-        <p class="lead">Unity form redirect service is currently unavailable due to an unhandled error/exception.</p>
-        <p class="lead">Please check the ITS Alerts page to track the outage status or report this issue to the ITS Help Desk.</p>
-        <ul class="mb-5">
-          <li><a href="https://www.hawaii.edu/its/alerts/">ITS System Alerts</a></li>
-          <li><a href="https://www.hawaii.edu/its/ecm/">ECM Support</a></li>
-        </ul>
-        <div class="row">
-          <div class="col-md-6">
+        <h2>Colors &amp; Variables</h2>
+        <p>The following colors are used to represent the site's different sections and have been selected to complement the UH System brand colors. They can only be used with white (white text, <em>never black</em>, when used as a background color or a white background with colored text) to comply with accessibility standards (level AA). They are used in the overview icons, breadcrumbs bar, for section titles on the left, and in the dropdown menus when logged in. The darker colors are used for hover and focus states in the dropdown menus.</p>
+        <div class="flex-container section-colors">
+          <div class="section">
+            <p class="swatch-label">Teal</p>
+            <div class="swatches">
+              <div class="item">
+                <div class="swatch teal"></div>
+                <code>$teal<br />#118080</code>
+              </div>
+              <div class="item">
+                <div class="swatch teal-dark"></div>
+                <code>$teal-darker<br />#0f7374</code>
+              </div>
+            </div>
           </div>
-          <div class="featured-image col-md-6 text-center">
-            <img class="img-fluid" src="images/missing.png" alt="missing page">
+          <div class="section">
+            <p class="swatch-label">Purple</p>
+            <div class="swatches">
+              <div class="item">
+                <div class="swatch purple"></div>
+                <code>$purple<br />#735e7c</code>
+              </div>
+              <div class="item">
+                <div class="swatch purple-dark"></div>
+                <code>$purple-darker<br />#64496a</code>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <p class="swatch-label">Green</p>
+            <div class="swatches">
+              <div class="item">
+                <div class="swatch green"></div>
+                <code>$green<br />#5f7b3f</code>
+              </div>
+              <div class="item">
+                <div class="swatch green-dark"></div>
+                <code>$green-darker<br />#4f6736</code>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <p class="swatch-label">Blue</p>
+            <div class="swatches">
+              <div class="item">
+                <div class="swatch blue"></div>
+                <code>$blue<br />#007d95</code>
+              </div>
+              <div class="item">
+                <div class="swatch blue-dark"></div>
+                <code>$blue-darker<br />#00677b</code>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <p class="swatch-label">Red</p>
+            <div class="swatches">
+              <div class="item">
+                <div class="swatch red"></div>
+                <code>$red<br />#b24b66</code>
+              </div>
+              <div class="item">
+                <div class="swatch red-dark"></div>
+                <code>$red-darker<br />#9a3f58</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>UH System Colors</h3>
+        <div class="flex-container uh-system">
+          <div class="item">
+            <p class="swatch-label">UH System</p>
+            <div class="swatch uhs"></div>
+            <code>$uh-system<br />#b3995d</code>
+            <p>Used for System logos</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH System - Dark</p>
+            <div class="swatch uhs-dark"></div>
+            <code>$uh-system-darker<br />#a5875c</code>
+            <p>Used with white text to comply with accessibility standards (level AA)</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH System - 50% Tint</p>
+            <div class="swatch uhs-50"></div>
+            <code>$uh-system-50<br />#d6c9b6</code>
+            <p>Used in the breadcrumbs bar on public pages with <code>$black</code> text</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH System - 30% Tint</p>
+            <div class="swatch uhs-30"></div>
+            <code>$uh-system-30<br />#e7ded3</code>
+            <p>Used as a background color for hover states in the menu</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH System - 20% Tint</p>
+            <div class="swatch uhs-20"></div>
+            <code>$uh-system-20<br />#efe9e2</code>
+            <p>Used as a background color in the menu</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH System - 12% Tint</p>
+            <div class="swatch uhs-12"></div>
+            <code>$uh-system-12<br />#f5f2ed</code>
+            <p>Used as a background for accordion content and overview cards</p>
+          </div>
+        </div>
+        <h3>Grays &amp; Other</h3>
+        <div class="flex-container grays">
+          <div class="item">
+            <p class="swatch-label">Black</p>
+            <div class="swatch black"></div>
+            <code>$black<br />#333</code>
+            <p>Used as a background in the primary header (when logged-in) and footer and text</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Darker Gray</p>
+            <div class="swatch darker-gray"></div>
+            <code>$darker-gray<br />#4d4d4d</code>
+            <p>Used for the logged in header and text</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Dark Gray</p>
+            <div class="swatch dark-gray"></div>
+            <code>$dark-gray<br />#666</code>
+            <p>Used for links to child pages in the menus on aggregate pages, best used over a white background</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Gray</p>
+            <div class="swatch gray"></div>
+            <code>$gray<br />#757575</code>
+            <p>Used for anchored links in the menus on aggregate pages, best used over a white background</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Light Gray</p>
+            <div class="swatch light-gray"></div>
+            <code>$light-gray<br />#808080</code>
+            <p></p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Lightest Gray</p>
+            <div class="swatch lightest-gray"></div>
+            <code>$lightest-gray<br />#f2f2f2</code>
+            <p>Used in the primary menu against a <code>$black</code> background</p>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Link Blue</p>
+            <div class="swatch link-blue"></div>
+            <code>$link-blue<br />#00748a</code>
+            <p>Used for links within the text</p>
+          </div>
+        </div>
+
+        <h3>Other Campus Colors</h3>
+        <div class="flex-container grays">
+          <div class="item">
+            <p class="swatch-label">UH Manoa</p>
+            <div class="swatch uhm"></div>
+            <code>$uh-manoa<br />#024731</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH Hilo</p>
+            <div class="swatch uhh"></div>
+            <code>$uh-hilo<br />#DA291C</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">UH West Oahu</p>
+            <div class="swatch uhwo"></div>
+            <code>$uh-west-oahu<br />#a71930</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Hawaii Community College</p>
+            <div class="swatch hawcc"></div>
+            <code>$uh-hawaii-cc<br />#91004b</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Honolulu Community College</p>
+            <div class="swatch honcc"></div>
+            <code>$uh-hon-cc<br />#4e84c4</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Kapiolani Community College</p>
+            <div class="swatch kapcc"></div>
+            <code>$uh-kapiolani-cc<br />#002395</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Kauai Community College</p>
+            <div class="swatch kcc"></div>
+            <code>$uh-kauai-cc<br />#716fb3</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Leeward Community College</p>
+            <div class="swatch lcc"></div>
+            <code>$uh-leeward-cc<br />#3d7edb</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Maui College</p>
+            <div class="swatch mc"></div>
+            <code>$uh-maui-c<br />#005172</code>
+          </div>
+          <div class="item">
+            <p class="swatch-label">Windward Community College</p>
+            <div class="swatch wcc"></div>
+            <code>$uh-windward<br />#7ab800</code>
           </div>
         </div>
       </div>
