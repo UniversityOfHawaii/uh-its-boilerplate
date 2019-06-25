@@ -60,6 +60,10 @@ pre {
     padding: 1rem;
 }
 
+code {
+    color: var(--blue);
+}
+
 .loader {
     border: 16px solid white; /* Black */
     border-top: 16px solid black; /* Blue */
