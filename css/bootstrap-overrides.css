@@ -1,40 +1,28 @@
 /* COLOR PALETTE */
 /* colors as background */
 
-.seafoam-bg {
-    background-color: var(--seafoam);
-    /*background-color: #f0f8f6;*/
-    color: #222;
+.green-bg {
+    background-color: var(--green);
 }
 
-.deep-blue-bg {
-    background-color: var(--deep-blue);
-    color: #fff;
-}
-
-.green-blue-bg {
-    background-color: var(--green-blue);
-}
-
-.dark-teal-bg {
-    background-color: var(--dark-teal);
-    color: #fff;
+.green-shade-bg {
+    background-color: var(--green-shade);
 }
 
 .teal-bg {
     background-color: var(--teal);
 }
 
+.teal-shade-bg {
+    background-color: var(--teal-shade);
+}
+
 .blue-bg {
     background-color: var(--blue);
 }
 
-.light-teal-bg {
-    background-color: var(--light-teal);
-}
-
-.teal-tint-bg {
-    background-color: var(--teal-tint);
+.blue-shade-bg {
+    background-color: var(--blue-shade);
 }
 
 .black-bg {
