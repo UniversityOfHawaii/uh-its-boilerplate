@@ -2,7 +2,7 @@
 <html lang="en-US">
 
   <head>
-    <title>Cards</title>
+    <title>Login</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- load font awesome 5 free -->
@@ -24,24 +24,48 @@
   </head>
 
   <body>
-    <header class="plain pt-3 mb-3">
-      <a href="https://www.hawaii.edu/its/uhlogin/mfa-required/#main_content" id="skip2main" class="sr-only">Skip to Main Content</a>
-      <div class="container">
-        <a href="https://hawaii.edu/" title="UH System website home">
-          <img class="img-fluid" src="./images/logos/nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
+    <header role="banner" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom pt-2 pb-2">
+        <a class="navbar-brand align-items-center" href="index.html">
+          <img class="img-fluid" src="./images/logos/uh-nameplate.png" srcset="./images/logos/uh-nameplate.png 1x, ./images/logos/uh-nameplate.png 2x" alt="UH logo">
+          <span class="sr-only">University of Hawai‘i</span>
         </a>
-      </div>
+      </nav>
     </header>
 
     <main>
       <div class="container" id="content" role="main">
-        <h1 class="pt-4">Cards</h1>
+        <h1 class="pt-4">Login</h1>
         <p class="lead">Unity form redirect service is currently unavailable due to an unhandled error/exception.</p>
-        <p class="lead">Please check the ITS Alerts page to track the outage status or report this issue to the ITS Help Desk.</p>
-        <ul class="mb-5">
-          <li><a href="https://www.hawaii.edu/its/alerts/">ITS System Alerts</a></li>
-          <li><a href="https://www.hawaii.edu/its/ecm/">ECM Support</a></li>
-        </ul>
+      </div>
+
+            <!-- login -->
+      <div class="container mt-5 mb-5">
+          <div class="row">
+              <div class="offset-lg-4 col-lg-4 offset-md-3 col-md-6 offset-sm-2 col-sm-8 offset-xs-1 col-xs-10">
+                  <div class="card p-5">
+                      <div class="logo text-center">
+                          <img class="img-fluid px-4 m-auto pb-4" src="./images/logos/uh-logo-stacked.png" alt="UH seal">
+                      </div>
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
       </div>
     </main>
 
