@@ -140,7 +140,7 @@ td.uh-pre {
 }
 
 .navbar-icons.navbar .navbar-nav a.nav-link {
-    border-left: 1px solid var(--uh-light-gray);
+    border-left: 1px solid var(--uh-lighter-gray);
     font-size: .85rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -172,7 +172,7 @@ td.uh-pre {
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767.4px) {
     .navbar-icons.navbar .navbar-nav {
-        border-right: 1px solid var(--uh-light-gray);
+        border-right: 1px solid var(--uh-lighter-gray);
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -180,7 +180,7 @@ td.uh-pre {
         flex-basis: 50%;
     }
     .navbar-icons.navbar .navbar-nav a.nav-link {
-        border-top: 1px solid var(--uh-light-gray);
+        border-top: 1px solid var(--uh-lighter-gray);
     }
 }
 

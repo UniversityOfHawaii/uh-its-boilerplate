@@ -1,6 +1,34 @@
 /* COLOR PALETTE */
 /* colors as background */
 
+.primary-bg {
+    background: var(--primary);
+}
+
+.secondary-bg {
+    background: var(--secondary);
+}
+
+.light-bg {
+    background: var(--light);
+}
+
+.success-bg {
+    background: var(--success);
+}
+
+.info-bg {
+    background: var(--info);
+}
+
+.warning-bg {
+    background: var(--warning);
+}
+
+.danger-bg {
+    background: var(--danger);
+}
+
 .green-bg {
     background-color: var(--green);
 }
@@ -90,6 +118,10 @@
     background-color: var(--uh-light-gray);
 }
 
+.uh-lighter-gray-bg {
+    background-color: var(--uh-lighter-gray);
+}
+
 .link-blue-bg {
     background-color: var(--link-blue);
 }
@@ -104,6 +136,46 @@
 
 .yellow-bg {
     background-color: var(--yellow);
+}
+
+.uh-manoa-bg {
+    background-color: var(--uh-manoa);
+}
+
+.uh-hilo-bg {
+    background-color: var(--uh-hilo);
+}
+
+.uh-west-oahu-bg {
+    background-color: var(--uh-west-oahu);
+}
+
+.hawaii-cc-bg {
+    background-color: var(--hawaii-cc);
+}
+
+.honolulu-cc-bg {
+    background-color: var(--honolulu-cc);
+}
+
+.kapiolani-cc-bg {
+    background-color: var(--kapiolani-cc);
+}
+
+.kauai-cc-bg {
+    background-color: var(--kauai-cc);
+}
+
+.leeward-cc-bg {
+    background-color: var(--leeward-cc);
+}
+
+.uh-maui-college-bg {
+    background-color: var(--uh-maui-college);
+}
+
+.windward-cc-bg {
+    background-color: var(--windward-cc);
 }
 
 .black-bg a,
@@ -325,4 +397,8 @@ body h1 {
 
 .border-light {
     border-color: var(--light) !important;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
 }
