@@ -25,19 +25,85 @@
     background-color: var(--blue-shade);
 }
 
-.black-bg {
+.purple-bg {
+    background-color: var(--purple);
+}
+
+.purple-shade-bg {
+    background-color: var(--purple-shade);
+}
+
+.red-bg {
+    background-color: var(--red);
+}
+
+.red-shade-bg {
+    background-color: var(--red-shade);
+}
+
+.black-bg,
+.uh-black-bg {
     background-color: var(--uh-black);
-    color: white;
+}
+
+.uh-system-bg {
+    background: var(--uh-system);
+}
+
+.uh-system-shade-bg {
+    background: var(--uh-system-shade);
+}
+
+.uh-system-dark-bg {
+    background: var(--uh-system-dark);
+}
+
+.uh-system-50-bg {
+    background: var(--uh-system-50);
+}
+
+.uh-system-30-bg {
+    background: var(--uh-system-30);
+}
+
+.uh-system-20-bg {
+    background: var(--uh-system-20);
+}
+
+.uh-system-12-bg {
+    background: var(--uh-system-12);
 }
 
 .uh-dark-gray-bg {
     background-color: var(--uh-dark-gray);
-    color: white;
 }
 
 .uh-darker-gray-bg {
     background-color: var(--uh-darker-gray);
-    color: white;
+}
+
+.uh-gray-bg {
+    background-color: var(--uh-gray);
+}
+
+.uh-light-gray-bg {
+    background-color: var(--uh-light-gray);
+}
+
+.link-blue-bg {
+    background-color: var(--link-blue);
+}
+
+.orange-bg {
+    background-color: var(--orange);
+}
+
+.orange-shade-bg {
+    background-color: var(--orange-shade);
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
 }
 
 .black-bg a,
@@ -60,14 +126,14 @@
 .uh-darker-gray-bg a:hover,
 .uh-darker-gray-bg a:focus,
 .uh-darker-gray-bg a:active {
-    color: LightGray;
+    color: var(--uh-light-gray);
 }
 
 .btn.dark-teal-bg:hover,
 .btn.dark-teal-bg:focus,
 .btn.dark-teal-bg:active {
-    color: #efefef;
-    background: #004e59;
+    color: var(--uh-light-gray);
+    background: var(--teal-shade);
 }
 
 /* bootstrap overrides */

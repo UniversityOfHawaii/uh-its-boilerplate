@@ -1,16 +1,29 @@
 :root {
+    --white: #fff;
     --uh-black: #222;
     --uh-darker-gray: #2d2d2d;
     --uh-dark-gray: #454545;
     --uh-gray: #676767;
-    --light-gray: #e7e7e7;
+    --uh-light-gray: #e7e7e7;
+
     --uh-system: #b3995d;
     --uh-system-shade: #a5875c;
+    --uh-system-dark: #907139;
     --uh-system-50: #d6c9b6;
     --uh-system-30: #e7ded3;
     --uh-system-20: #efe9e2;
     --uh-system-12: #f5f2ed;
-    --white: #fff;
+
+    --uh-manoa: #024731;
+    --uh-hilo: #DA291C;
+    --uh-west-oahu: #a71930;
+    --hawaii-cc: #91004b;
+    --honolulu-cc: #007b85;
+    --kapiolani-cc: #002395;
+    --kauai-cc: #716fb3;
+    --leeward-cc: #3d7edb;
+    --uh-maui-college: #005172;
+    --windward-cc: #7ab800;
 
     --primary: #007d95;
     --secondary: #676767;
@@ -20,7 +33,7 @@
     --warning: #ffd969;
     --danger: #9a3f58;
 
-    --red: #9a3f58;
+    --red: #b24b66;
     --red-shade: #9a3f58;
     --green: #5f7b3f;
     --green-shade: #4f6736;
@@ -32,8 +45,8 @@
     --teal-shade: #0f7374;
 
     --link-blue: #00748a;
-    --orange: #ff7962;
-    --orange-shade: #ea5a4f;
+    --orange: #ea5a4f;
+    --orange-shade: #d04f45;
     --yellow: #ffd969;
 
 /*
