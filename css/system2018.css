@@ -289,8 +289,6 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 
 #header_top_content {
     color: #fff;
-    font-size: 14px;
-    max-width: 1000px;
     margin: 0 auto;
     padding: 18px 0 6px;
 }
@@ -356,7 +354,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
     height: auto;
     margin: 0 auto;
     max-width: 100%;
-    max-height: 3.5rem;
+    /*max-height: 3.5rem;*/
 }
 #department_name {
     margin: 0 auto;
@@ -511,7 +509,6 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 
 /* main */
 #main_content {
-    max-width: 1000px;
     margin: 0 auto;
     padding-bottom: 30px;
 }
@@ -796,32 +793,6 @@ address h2 {
         max-width: 99%;
         height: auto;
     }
-}
-
-/*
-LAYOUTS
-*/
-
-.one-column #content {
-    width: 100%;
-}
-main.one-column #main_content {
-    max-width: none;
-}
-main.one-column #container {
-    float: none;
-    margin: 0 auto;
-    width: 1000px;
-    max-width: 100%;
-}
-
-main.one-column #content, main.full-width #content {
-  width: 100%;
-}
-
-.single-attachment #content {
-    margin: 0 auto;
-    width: 1000px;
 }
 
 
