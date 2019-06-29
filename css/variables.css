@@ -26,13 +26,14 @@
     --uh-maui-college: #005172;
     --windward-cc: #7ab800;
 
-    --primary: #007d95;
-    --secondary: #676767;
-    --light: #e7e7e7;
-    --success: #5f7b3f;
-    --info: #907139;
-    --warning: #ffd969;
-    --danger: #b24b66;
+    --primary: var(--blue);
+    --secondary: var(--uh-gray);
+    --light: var(--uh-light-gray);
+    --success: var(--green);
+    --info: var(--uh-system-dark);
+    --warning: var(--yellow);
+    --danger: var(--red);
+    --muted: var(--gray);
 
     --red: #b24b66;
     --red-shade: #9a3f58;

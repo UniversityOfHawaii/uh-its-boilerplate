@@ -682,3 +682,58 @@ header.plain #header_top #header_mid_logo {
 .min-height-500 {
     min-height: 500px;
 }
+
+blockquote {
+    background-color: var(--uh-lighter-gray);
+    margin: 20px 0;
+    padding: 20px;
+}
+blockquote.note {
+    background-color: var(--uh-system-12);
+}
+blockquote.info {
+    background: transparent;
+    border: 1px solid var(--uh-lighter-gray);
+    padding-left: 50px;
+    position: relative;
+}
+blockquote.info:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--uh-system);
+    content: "\f05a";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+blockquote.alert {
+    background: #f8eef0;
+    padding-left: 50px;
+    position: relative;
+}
+blockquote.alert:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--danger);
+    content: "\f06a";
+    position: absolute;
+    top: 12px;
+    left: 20px;
+}
+blockquote.quote {
+    background: transparent;
+    border-left: 4px solid var(--uh-system-dark);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+blockquote p {
+    margin: 0;
+}
+blockquote p + p {
+    margin-top: 18px;
+}
+blockquote cite,
+blockquote em,
+blockquote i {
+    font-style: normal;
+}

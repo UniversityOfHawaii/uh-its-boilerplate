@@ -178,6 +178,34 @@
     background-color: var(--windward-cc);
 }
 
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.text-info {
+    color: var(--info) !important;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
 .black-bg a,
 .dark-teal-bg a,
 .uh-dark-gray-bg a,

@@ -882,58 +882,7 @@ ins {
     background: #ffc;
     text-decoration: none;
 }
-blockquote {
-    background: #e7e7e7;
-    margin: 20px 0;
-    padding: 20px;
-}
-blockquote.note {
-    background: #f0e9e3;
-}
-blockquote.info {
-    background: transparent;
-    border: 1px solid #e7e7e7;
-    padding-left: 50px;
-    position: relative;
-}
-blockquote.info:before {
-    font-family: "FontAwesome";
-    color: #907139;
-    content: "\f05a";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-blockquote.alert {
-    background: #f8eef0;
-    padding-left: 50px;
-    position: relative;
-}
-blockquote.alert:before {
-    font-family: "FontAwesome";
-    color: #b24b66;
-    content: "\f06a";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-blockquote.quote {
-    background: transparent;
-    border-left: 4px solid #907139;
-    padding-bottom: 0;
-    padding-top: 0;
-}
-blockquote p {
-    margin: 0;
-}
-blockquote p + p {
-    margin-top: 18px;
-}
-blockquote cite,
-blockquote em,
-blockquote i {
-    font-style: normal;
-}
+
 .anchor-container:before {
     content: "";
     display: block;
