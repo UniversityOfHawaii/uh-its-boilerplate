@@ -16,7 +16,7 @@ services:
         com.df.servicePath: "/boilerplate/${BUILD_VERSION:?err}/"
         com.df.reqPathSearch: "/boilerplate/${BUILD_VERSION:?err}/"
         com.df.reqPathReplace: "/"
-        com.df.port: "8080"
+        com.df.port: "80"
         # allows Jenkins to kill this stack after the related branch has been deleted
         edu.hawaii.clean-orphaned: "true"
         edu.hawaii.repo: "git@github.com:UniversityOfHawaii/uh-its-boilerplate.git"

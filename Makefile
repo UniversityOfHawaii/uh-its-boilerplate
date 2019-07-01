@@ -25,26 +25,23 @@ build-image: ## (custom,image) builds the image
 publish-image: ## (custom,image) publishes the image
 	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) push $(SERVICE_NAME)
 
-imageIds:=$(shell sh/localImageExists.sh $(IMAGE_NAME))
-clean-dev-image:
-ifneq ($(imageIds),)
-	@docker image rm $(imageIds)
-endif
-
-dev-image-exists:
-	@sh/localImageExists.sh $(IMAGE_NAME) >& /dev/null || (printf "dev image %s does not exist\n" $(IMAGE_NAME) && exit 1)
-
-deploy-dev: dev-image-exists ## (custom,image) deploys the dev stack
-	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) config | docker stack deploy -c - $(STACK_NAME)
+deploy: ## (custom,image) deploys the stack
+	BUILD_VERSION=$(BUILD_VERSION) IMAGE_NAME=$(IMAGE_NAME) docker stack deploy -c docker-compose/dev-test.yml $(STACK_NAME)
 	@sh/stackIsUp.sh $(STACK_NAME)
 
-undeploy-dev: ## (custom,image) undeploys the dev stack
+undeploy: ## (custom,image) undeploys the stack
 	@docker stack rm $(STACK_NAME)
 	@(docker network rm $(shell docker network ls -q --filter Name=$(PROJECT_NAME)) 1>/dev/null 2>&1 || true)
 	@sh/stackIsDown.sh $(STACK_NAME)
 
 build-test-image: ## (custom,image) publishes the image (forcibly sets REGISTRY to QA)
-	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) -r registry-qa.pvt.hawaii.edu/ build
+	$(MAKE) REGISTRY=registry-qa.pvt.hawaii.edu/ build-image
 
 publish-test-image: ## (custom,image) publishes the image (forcibly sets REGISTRY to QA)
-	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) -r registry-qa.pvt.hawaii.edu/ push $(SERVICE_NAME)
+	$(MAKE) REGISTRY=registry-qa.pvt.hawaii.edu/ publish-image
+
+deploy-test: ## (custom,image) deploys the stack in test
+	$(MAKE) REGISTRY=registry-qa.pvt.hawaii.edu/ deploy
+
+undeploy-test: ## (custom,image) undeploys the stack in test
+	$(MAKE) REGISTRY=registry-qa.pvt.hawaii.edu/ undeploy
