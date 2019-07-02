@@ -1,23 +1,18 @@
 ##
 # The following environment variables will be set by Jenkins for THE TEST swarm:
-#   VERSION = releaseDataFromGit.versionFromGitStatus()
+#   BUILD_VERSION = releaseDataFromGit.versionFromGitStatus()
 #   REGISTRY = releaseDataFromGit.registryFromGitStatus()
-#
-#   PORTS_CONFIG = "80"
-#     NB: the lack of '\d:' above lets docker connect a random, unused
-#     external port to internal port 80
-#   PROXY_NETWORK_IS_EXTERNAL = true
 ##
 version: '3.6'
 services:
   server:
-    image: ${REGISTRY}uh-its-boilerplate:${BUILD_VERSION:-SNAPSHOT}
+    image: ${REGISTRY?:err}uh-its-boilerplate:${BUILD_VERSION?:err}
     build:
       context: ../
     environment:
       TZ: HST
     ports:
-      - ${PORTS_CONFIG:-8080:80}
+      - "80"
     deploy:
       labels:
         # configures the reverse proxy
@@ -36,6 +31,6 @@ services:
       - default
 networks:
   proxy:
-    external: ${PROXY_NETWORK_IS_EXTERNAL:-false}
+    external: true
   default:
     attachable: true
