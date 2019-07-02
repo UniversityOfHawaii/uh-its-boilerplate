@@ -33,6 +33,9 @@ services:
         edu.hawaii.branch: ${BUILD_VERSION:?err}
     networks:
       - proxy
+      - default
 networks:
   proxy:
     external: ${PROXY_NETWORK_IS_EXTERNAL:-false}
+  default:
+    attachable: true
