@@ -21,7 +21,7 @@ endif
 
 PROJECT_NAME := uh-its-boilerplate
 SERVICE_NAME := server
-STACK_NAME := boilerplate
+STACK_NAME := boilerplate_$(BUILD_VERSION)
 
 include mk/shared/common.mk
 
