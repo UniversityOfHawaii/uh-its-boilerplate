@@ -1,0 +1,36 @@
+##
+# The following environment variables will be set by Jenkins for THE TEST swarm:
+#   BUILD_VERSION = releaseDataFromGit.versionFromGitStatus()
+#   REGISTRY = releaseDataFromGit.registryFromGitStatus()
+##
+version: '3.6'
+services:
+  server:
+    image: ${REGISTRY?:err}uh-its-boilerplate:${BUILD_VERSION?:err}
+    build:
+      context: ../
+    environment:
+      TZ: HST
+    ports:
+      - "80"
+    deploy:
+      labels:
+        # configures the reverse proxy
+        com.df.notify: "true"
+        com.df.distribute: "true"
+        com.df.servicePath: "/boilerplate/${BUILD_VERSION:?err}/"
+        com.df.reqPathSearch: "/boilerplate/${BUILD_VERSION:?err}/"
+        com.df.reqPathReplace: "/"
+        com.df.port: "80"
+        # allows Jenkins to kill this stack after the related branch has been deleted
+        edu.hawaii.clean-orphaned: "true"
+        edu.hawaii.repo: "git@github.com:UniversityOfHawaii/uh-its-boilerplate.git"
+        edu.hawaii.branch: ${BUILD_VERSION:?err}
+    networks:
+      - proxy
+      - default
+networks:
+  proxy:
+    external: true
+  default:
+    attachable: true

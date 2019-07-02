@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  server:
+    image: uh-its-boilerplate:SNAPSHOT
+    build:
+      context: ../
+    environment:
+      TZ: HST
+    ports:
+      - "8080:80"
