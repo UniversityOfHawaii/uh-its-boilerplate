@@ -6,17 +6,20 @@ pipeline {
   environment {
     REGISTRY = releaseDataFromGit.registryFromGitStatus()
     BUILD_VERSION = releaseDataFromGit.versionFromGitStatus()
+
+    PORTS_CONFIG = "80"
+    PROXY_NETWORK_IS_EXTERNAL = true
   }
   
   stages {
     stage('Build the image') {
       steps {
-        sh "BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} make build-image"
+        sh "REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make build-image"
       }
     }
     stage('Publish the image') {
       steps {
-        sh "BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} make publish-image"
+        sh "REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make publish-image"
       }
     }
   }

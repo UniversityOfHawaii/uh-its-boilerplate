@@ -64,7 +64,6 @@ DEBUG=0
 FILE_LIST=
 BUILD_VERSION=
 REGISTRY=
-IMAGE_NAME=
 PROJECT_NAME=
 
 #
@@ -92,9 +91,6 @@ while getopts "$optstring" options; do
     r)
       REGISTRY=${OPTARG}
       ;;
-    i)
-      IMAGE_NAME=${OPTARG}
-      ;;
     :)
       # complain about missing required arguments
       printf "option '-%s' requires an argument\n" "$OPTARG"
@@ -118,10 +114,6 @@ if [ "$FILE_LIST" == "" ]; then
 fi
 if [ "$PROJECT_NAME" == "" ]; then
   printf "missing required project name\n"
-  broken=1
-fi
-if [ "$IMAGE_NAME" == "" ]; then
-  printf "image name must not be blank\n"
   broken=1
 fi
 if [ "$BUILD_VERSION" == "" ]; then
@@ -148,9 +140,9 @@ shift $((OPTIND-1))
 #
 
 if [ $DEBUG -eq 1 ]; then
-  echo "BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} IMAGE_NAME=${IMAGE_NAME} docker-compose --project-name ${PROJECT_NAME} ${FILE_LIST} $@"
+  echo "BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} docker-compose --project-name ${PROJECT_NAME} ${FILE_LIST} $@"
   exit 0
 fi
 
 # shellcheck disable=SC2086
-BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} IMAGE_NAME=${IMAGE_NAME} docker-compose --project-name ${PROJECT_NAME} ${FILE_LIST} "$@"
+BUILD_VERSION=${BUILD_VERSION} REGISTRY=${REGISTRY} docker-compose --project-name ${PROJECT_NAME} ${FILE_LIST} "$@"

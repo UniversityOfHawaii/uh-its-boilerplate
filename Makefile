@@ -12,21 +12,19 @@ BUILD_VERSION ?= SNAPSHOT
 PROJECT_NAME := uh-its-boilerplate
 SERVICE_NAME := server
 STACK_NAME := boilerplate
-IMAGE_NAME := $(PROJECT_NAME):$(BUILD_VERSION)
 
 include mk/shared/common.mk
 
-COMPOSE_COMMON := -p $(PROJECT_NAME) -b $(BUILD_VERSION) -i $(IMAGE_NAME) -r $(REGISTRY)
-DEV_COMPOSE_COMMON := $(COMPOSE_COMMON) -f docker-compose/dev-test.yml
+COMPOSE_COMMON := -p $(PROJECT_NAME) -b $(BUILD_VERSION) -r $(REGISTRY) -f docker-compose/dev-test.yml
 
 build-image: ## (custom,image) builds the image
-	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) build
+	@sh/dcompose.sh $(COMPOSE_COMMON) build
 
 publish-image: ## (custom,image) publishes the image
-	@sh/dcompose.sh $(DEV_COMPOSE_COMMON) push $(SERVICE_NAME)
+	@sh/dcompose.sh $(COMPOSE_COMMON) push $(SERVICE_NAME)
 
 deploy: ## (custom,image) deploys the stack
-	BUILD_VERSION=$(BUILD_VERSION) IMAGE_NAME=$(IMAGE_NAME) docker stack deploy -c docker-compose/dev-test.yml $(STACK_NAME)
+	BUILD_VERSION=$(BUILD_VERSION) docker stack deploy -c docker-compose/dev-test.yml $(STACK_NAME)
 	@sh/stackIsUp.sh $(STACK_NAME)
 
 undeploy: ## (custom,image) undeploys the stack
