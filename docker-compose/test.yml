@@ -15,13 +15,6 @@ services:
       - "80"
     deploy:
       labels:
-        # configures the docker flow reverse proxy
-        com.df.notify: "true"
-        com.df.distribute: "true"
-        com.df.servicePath: "/boilerplate/${BUILD_VERSION:?err}/"
-        com.df.reqPathSearch: "/boilerplate/${BUILD_VERSION:?err}/"
-        com.df.reqPathReplace: "/"
-        com.df.port: "80"
         # configures the traefik reverse proxy
         traefik.enable: "true"
         traefik.http.routers.boilerplate-router.rule: "PathPrefix(`/boilerplate/${BUILD_VERSION:?err}`)"
