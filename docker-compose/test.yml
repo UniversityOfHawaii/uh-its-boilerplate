@@ -17,11 +17,11 @@ services:
       labels:
         # configures the traefik reverse proxy
         traefik.enable: "true"
-        traefik.http.routers.boilerplate-router.rule: "PathPrefix(`/boilerplate/${BUILD_VERSION:?err}`)"
-        traefik.http.routers.boilerplate-router.middlewares: "strip-context"
-        traefik.http.middlewares.strip-context.stripprefix.prefixes: "/boilerplate/${BUILD_VERSION:?err}"
-        traefik.http.routers.boilerplate-router.service: "boilerplate-service"
-        traefik.http.services.boilerplate-service.loadbalancer.server.port: "80" 
+        traefik.http.routers.boilerplate-${BUILD_VERSION:?err}-router.rule: "PathPrefix(`/boilerplate/${BUILD_VERSION:?err}`)"
+        traefik.http.routers.boilerplate-${BUILD_VERSION:?err}-router.middlewares: "boilerplate-${BUILD_VERSION:?err}-middleware1"
+        traefik.http.middlewares.boilerplate-${BUILD_VERSION:?err}-middleware1.stripprefix.prefixes: "/boilerplate/${BUILD_VERSION:?err}"
+        traefik.http.routers.boilerplate-${BUILD_VERSION:?err}-router.service: "boilerplate-${BUILD_VERSION:?err}-service"
+        traefik.http.services.boilerplate-${BUILD_VERSION:?err}-service.loadbalancer.server.port: "80" 
         # allows Jenkins to kill this stack after the related branch has been deleted
         edu.hawaii.clean-orphaned: "true"
         edu.hawaii.repo: "git@github.com:UniversityOfHawaii/uh-its-boilerplate.git"
