@@ -12,24 +12,24 @@ pipeline {
   stages {
     stage('Build the image') {
       steps {
-        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make build-image"
+        sh "make build-image"
       }
     }
     stage('Publish the image') {
       steps {
-        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make publish-image"
+        sh "make publish-image"
       }
     }
 
     stage('Undeploy the existing stack, if any') {
       steps {
-        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make undeploy"
+        sh "make undeploy"
       }
     }
     stage('Deploy the current stack') {
       steps {
-        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make deploy"
-        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make add-traefik-labels"
+        sh "make deploy"
+        sh "make add-traefik-labels"
       }
     }
   }
