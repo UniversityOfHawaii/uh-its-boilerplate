@@ -25,6 +25,15 @@ STACK_NAME := boilerplate_$(BUILD_VERSION)
 
 include mk/shared/common.mk
 
+define ADD_TRAEFIK_LABELS
+--label-add traefik.enable="true" \
+--label-add traefik.http.routers.$(STACK_NAME)-router.rule="PathPrefix(\`/boilerplate/$(BUILD_VERSION)\`)" \
+--label-add traefik.http.routers.$(STACK_NAME)-router.middlewares="$(STACK_NAME)-middleware1" \
+--label-add traefik.http.middlewares.$(STACK_NAME)-middleware1.stripprefix.prefixes="/boilerplate/$(BUILD_VERSION)" \
+--label-add traefik.http.routers.$(STACK_NAME)-router.service="$(STACK_NAME)-service" \
+--label-add traefik.http.services.$(STACK_NAME)-service.loadbalancer.server.port="80"
+endef
+
 COMPOSE_COMMON := -p $(PROJECT_NAME) -b $(BUILD_VERSION) -r $(REGISTRY)
 
 build-image: ## (custom,image) builds the image
@@ -36,6 +45,9 @@ publish-image: ## (custom,image) publishes the image
 deploy: ## (custom,image) deploys the stack
 	BUILD_VERSION=$(BUILD_VERSION) docker stack deploy -c $(DCFILE) $(STACK_NAME)
 	@sh/stackIsUp.sh $(STACK_NAME)
+
+add-traefik-labels: ## (custom,image) adds traefik labels to the stack's service
+	docker service update $(ADD_TRAEFIK_LABELS) $(STACK_NAME)_server
 
 undeploy: ## (custom,image) undeploys the stack
 	@docker stack rm $(STACK_NAME)

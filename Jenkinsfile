@@ -8,7 +8,7 @@ pipeline {
     REGISTRY = releaseDataFromGit.registryFromGitStatus()
     BUILD_VERSION = releaseDataFromGit.versionFromGitStatus()
   }
-  
+
   stages {
     stage('Build the image') {
       steps {
@@ -29,6 +29,7 @@ pipeline {
     stage('Deploy the current stack') {
       steps {
         sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make deploy"
+        sh "TARGET_ENV=${TARGET_ENV} REGISTRY=${REGISTRY} BUILD_VERSION=${BUILD_VERSION} make add-traefik-labels"
       }
     }
   }
